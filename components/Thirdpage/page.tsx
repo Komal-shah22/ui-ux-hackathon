@@ -175,7 +175,7 @@ const CasualPage = () => {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-8 px-4 lg:px-0 flex-col lg:flex-row">
+        <div className="mb-20 flex justify-between items-center mt-8 px-4 lg:px-0 flex-col lg:flex-row">
           <button className="bg-gray-300 text-gray-700 py-2 px-4 flex items-center justify-center rounded mb-4 lg:mb-0">
             <HiArrowSmLeft /> Previous
           </button>

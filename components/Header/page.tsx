@@ -8,6 +8,8 @@ import vector from '../../public/Vector.png';
 import cart from '../../public/cart.png';
 import search from '../../public/search.png';
 
+const menuItems = ['shop', 'onsales', 'newarrivals', 'brands'];
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -25,14 +27,16 @@ const Header = () => {
         <h1 className="font-extrabold text-2xl md:text-4xl flex-1 text-center md:text-left">
           SHOP.CO
         </h1>
+
         <div className="md:hidden flex items-center gap-4">
           <Image src={search} alt="Search" width={24} height={24} />
           <Image src={cart} alt="Cart" width={24} height={24} />
           <Image src={vector} alt="Profile" width={24} height={24} />
         </div>
+
         <nav className="hidden md:flex items-center justify-between flex-1">
-          <ul className="flex  lg:gap-16 capitalize text-sm lg:text-sm">
-            {['shop','onSales','newArrivals','brands'].map((val, ind) => (
+          <ul className="flex lg:gap-16 capitalize text-sm lg:text-sm">
+            {menuItems.map((val, ind) => (
               <li key={ind}>
                 <Link
                   href={val === 'shop' ? '/' : `/${val.replace(' ', '-').toLowerCase()}`}
@@ -48,9 +52,10 @@ const Header = () => {
           </div>
         </nav>
       </header>
+
       {menuOpen && (
         <ul className="md:hidden flex flex-col items-center bg-white text-lg capitalize gap-4 py-4 shadow-md">
-          {['shop', 'onSales', 'newArrivals', 'brands'].map((val, ind) => (
+          {menuItems.map((val, ind) => (
             <li key={ind}>
               <Link
                 href={val === 'shop' ? '/' : `/${val.replace(' ', '-').toLowerCase()}`}
@@ -68,4 +73,3 @@ const Header = () => {
 };
 
 export default Header;
-

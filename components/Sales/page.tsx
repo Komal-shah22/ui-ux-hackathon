@@ -34,7 +34,7 @@ const Topselling= () => {
   ];
 
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white py-10 mb-20">
       <div className="container mx-auto px-6">
         <h1 className="text-4xl font-extrabold text-center mb-8 ">YOU MIGHT ALSO LIKE</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
