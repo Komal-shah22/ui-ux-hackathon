@@ -13,8 +13,8 @@ import github from '../../public/github.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F0F0F0] text-[#181717] py-10 pb-20">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 px-5">
+    <footer className="bg-[#F0F0F0] pt-44 w-full text-[#181717] py-10 pb-20">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 px-5">
         <div>
           <h3 className="text-3xl font-extrabold mb-3">SHOP.CO</h3>
           <p className="text-[12px] mb-3">
@@ -73,8 +73,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-10 border-t border-gray-300 pt-5 flex flex-col md:flex-row justify-between items-center px-5 text-sm text-slate-400">
-        <p className="mb-3 md:mb-0">Shop.co © 2000-2023, All Rights Reserved</p>
-        <div className="flex gap-3">
+        <p className="mb-3 md:mb-0 text-center">Shop.co © 2000-2023, All Rights Reserved</p>
+        <div className="flex gap-3 justify-center md:justify-start">
           <Image src={badge} alt="badge" width={30} height={30} />
           <Image src={badge1} alt="badge1" width={30} height={30} />
           <Image src={badge2} alt="badge2" width={30} height={30} />
@@ -87,5 +87,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 

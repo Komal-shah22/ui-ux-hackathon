@@ -13,43 +13,50 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full mx-w-[1200px] mx-auto h-20 border-black border-b flex items-center justify-between px-6 pt-6 font-[poppins] gap-2">
+      <header className="w-full max-w-[1240px] mx-auto h-20 border-b border-black flex items-center justify-between px-4 lg:px-6">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
           className="md:hidden text-3xl focus:outline-none"
         >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
-        
-        <h1 className="font-extrabold text-4xl sm:text-sm md:text-4xl flex-1 text-center sm:pl-0">SHOP.CO</h1>
-        
-        <div className="md:hidden flex justify-between items-center gap-4 font-bold text-4xl ml-10 mr-0 mt-4">
-          <Image src={search} alt="search" />
-          <Image src={cart} alt="cart" />
-          <Image src={vector} alt="vector" />
+
+        <h1 className="font-extrabold text-2xl md:text-4xl flex-1 text-center md:text-left">
+          SHOP.CO
+        </h1>
+        <div className="md:hidden flex items-center gap-4">
+          <Image src={search} alt="Search" width={24} height={24} />
+          <Image src={cart} alt="Cart" width={24} height={24} />
+          <Image src={vector} alt="Profile" width={24} height={24} />
         </div>
-        
-        <div className="hidden md:flex w-full items-center justify-between ml-16">
-          <ul className="flex gap-8 capitalize text-sm lg:text-base">
-            {['shop', 'on sales', 'new arrivals', 'brands'].map((val, ind) => (
+        <nav className="hidden md:flex items-center justify-between flex-1">
+          <ul className="flex  lg:gap-16 capitalize text-sm lg:text-sm">
+            {['shop','onSales','newArrivals','brands'].map((val, ind) => (
               <li key={ind}>
-                <Link href={val === 'shop' ? '/' : `/${val.replace(' ', '-').toLowerCase()}`}>
+                <Link
+                  href={val === 'shop' ? '/' : `/${val.replace(' ', '-').toLowerCase()}`}
+                  className="hover:text-gray-600 transition-colors"
+                >
                   {val}
                 </Link>
               </li>
             ))}
           </ul>
-          
-          <div className="ml-2 max-md:hidden hidden lg:block ">
+          <div className="hidden lg:block">
             <SearchBar />
           </div>
-        </div>
-      </div>
+        </nav>
+      </header>
       {menuOpen && (
-        <ul className="md:hidden md:gap-8 lg:gap-10 flex flex-col items-center bg-white text-lg capitalize gap-4 py-4">
+        <ul className="md:hidden flex flex-col items-center bg-white text-lg capitalize gap-4 py-4 shadow-md">
           {['shop', 'on sales', 'new arrivals', 'brands'].map((val, ind) => (
             <li key={ind}>
-              <Link href={val === 'shop' ? '/' : `/${val.replace(' ', '-').toLowerCase()}`}>
+              <Link
+                href={val === 'shop' ? '/' : `/${val.replace(' ', '-').toLowerCase()}`}
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-gray-600 transition-colors"
+              >
                 {val}
               </Link>
             </li>
@@ -61,3 +68,4 @@ const Header = () => {
 };
 
 export default Header;
+

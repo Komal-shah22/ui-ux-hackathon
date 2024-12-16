@@ -8,7 +8,7 @@ import { FiSearch } from "react-icons/fi";
 
 const SearchBar = () => {
   return (
-    <div className="flex justify-center items-center mb-4">
+    <div className="flex justify-center items-center mb-4 w-[577px] ml-8">
       <div className="relative w-[600px] max-w-xl">
         <div className="flex items-center absolute left-3 top-1/2 transform -translate-y-1/2 text-[#000000]">
           <FiSearch className="w-5 h-5 text-slate-500" />

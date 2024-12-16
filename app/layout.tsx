@@ -6,7 +6,6 @@ import Header from "@/components/Header/page";
 import TopFooter from "@/components/TopFooter/page";
 import Footer from "@/components/Footer/page";
 
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
