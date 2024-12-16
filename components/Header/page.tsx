@@ -50,7 +50,7 @@ const Header = () => {
       </header>
       {menuOpen && (
         <ul className="md:hidden flex flex-col items-center bg-white text-lg capitalize gap-4 py-4 shadow-md">
-          {['shop', 'on sales', 'new arrivals', 'brands'].map((val, ind) => (
+          {['shop', 'onSales', 'newArrivals', 'brands'].map((val, ind) => (
             <li key={ind}>
               <Link
                 href={val === 'shop' ? '/' : `/${val.replace(' ', '-').toLowerCase()}`}
