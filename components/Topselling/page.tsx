@@ -44,7 +44,7 @@ const Topselling= () => {
         </div>
 
         <div className="text-center mt-8">
-          <button className="bg-white border-gray-500 border-2 text-black px-14 py-3 rounded-3xl shadow-lg hover:bg-gray-800">
+          <button className="bg-white border-gray-500 border-2 text-black px-14 py-3 rounded-3xl shadow-lg hover:bg-black hover:text-white">
             View All
           </button>
         </div>

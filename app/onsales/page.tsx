@@ -8,8 +8,6 @@ const Sales = () => {
     <div>
       <ProductDetail />
       <SecondReviews />
-      <SecondReviews />
-      <SecondReviews />
       <Brands />
 
     </div>

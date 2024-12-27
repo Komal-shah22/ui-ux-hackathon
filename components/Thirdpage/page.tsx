@@ -5,6 +5,7 @@ import { RiArrowRightSLine, RiArrowRightLine } from "react-icons/ri";
 import vector from '../../public/Vector (3).png';
 import Image from 'next/image';
 import { HiArrowSmLeft } from "react-icons/hi";
+import Pagination from '../Pagination/page';
 
 const CasualPage = () => {
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
@@ -155,7 +156,7 @@ const CasualPage = () => {
               <ul className="space-y-2">
                 {styles.map(style => (
                   <li
-                    key={style}
+                    key={style}                    
                     className="text-gray-600 cursor-pointer hover:underline"
                   >
                     {style}
@@ -174,27 +175,7 @@ const CasualPage = () => {
             </div>
           </div>
         </div>
-
-        <div className="mb-20 flex justify-between items-center mt-8 px-4 lg:px-0 flex-col lg:flex-row">
-          <button className="bg-gray-300 text-gray-700 py-2 px-4 flex items-center justify-center rounded mb-4 lg:mb-0">
-            <HiArrowSmLeft /> Previous
-          </button>
-
-          <div className="flex space-x-2 mb-4 lg:mb-0">
-            {[...Array(5).keys()].map(page => (
-              <button
-                key={page}
-                className="w-8 h-8 flex items-center justify-center border rounded"
-              >
-                {page + 1}
-              </button>
-            ))}
-          </div>
-
-          <button className="bg-gray-300 text-gray-700 py-2 px-4 flex justify-center items-center rounded">
-            Next <RiArrowRightLine />
-          </button>
-        </div>
+        <Pagination />
       </div>
     </div>
   );

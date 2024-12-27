@@ -21,16 +21,16 @@ const Footer = () => {
             We have clothes that suit your style and which you’re proud to wear. From women to men.
           </p>
           <div className="flex gap-3 mt-5">
-            <Link href="#" className="hover:opacity-75 transition-opacity">
+            <Link href="https://www.linkedin.com/in/komal-shah-0b162a296/" className="hover:opacity-75 transition-opacity">
               <Image src={twitter} alt="twitter" width={24} height={24} />
             </Link>
             <Link href="#" className="hover:opacity-75 transition-opacity">
               <Image src={facebook} alt="facebook" width={24} height={24} />
             </Link>
-            <Link href="#" className="hover:opacity-75 transition-opacity">
+            <Link href="https://www.instagram.com/mirrordoll3/?igsh=MWZ3bXB5NGpqOHRyeg%3D%3D#" className="hover:opacity-75 transition-opacity">
               <Image src={insta} alt="instagram" width={24} height={24} />
             </Link>
-            <Link href="#" className="hover:opacity-75 transition-opacity">
+            <Link href="https://github.com/Komal-shah22" className="hover:opacity-75 transition-opacity">
               <Image src={github} alt="github" width={24} height={24} />
             </Link>
           </div>

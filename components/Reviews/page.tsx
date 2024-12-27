@@ -1,6 +1,7 @@
-import React from "react";
-import { IoMdArrowRoundBack } from "react-icons/io";
-import { IoMdArrowRoundForward } from "react-icons/io";
+
+'use client'
+import React, { useState } from "react";
+import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 
 const testimonials = [
   {
@@ -21,9 +22,40 @@ const testimonials = [
       "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
     rating: 5,
   },
+  {
+    name: "Emma R.",
+    review:
+      "The quality and affordability of the clothing from Shop.co are unmatched! I’ve recommended them to all my friends and family.",
+    rating: 4,
+  },
+  {
+    name: "Chris P.",
+    review:
+      "Shop.co has become my go-to shopping destination. The experience has been nothing short of amazing every single time.",
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 1
+    );
+  };
+
+  const visibleTestimonials = testimonials.slice(
+    currentIndex,
+    currentIndex + 3
+  );
+
   return (
     <section className="py-12 bg-white pb-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,16 +64,22 @@ const Testimonials = () => {
             Our Happy Customers
           </h2>
           <div className="flex gap-2">
-            <span className="w-[30px] h-[30px] rounded-full bg-slate-100 text-center flex justify-center items-center cursor-pointer">
+            <span
+              onClick={handlePrev}
+              className="w-[30px] h-[30px] rounded-full bg-slate-100 text-center flex justify-center items-center cursor-pointer"
+            >
               <IoMdArrowRoundBack />
             </span>
-            <span className="w-[30px] h-[30px] rounded-full bg-slate-100 text-center flex justify-center items-center cursor-pointer">
+            <span
+              onClick={handleNext}
+              className="w-[30px] h-[30px] rounded-full bg-slate-100 text-center flex justify-center items-center cursor-pointer"
+            >
               <IoMdArrowRoundForward />
             </span>
           </div>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid gap-8 md:grid-cols-3">
+          {visibleTestimonials.map((testimonial, index) => (
             <div
               key={index}
               className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
@@ -63,7 +101,9 @@ const Testimonials = () => {
                     ))}
                 </span>
               </div>
-              <p className="text-gray-800 font-bold italic">{testimonial.name}</p>
+              <p className="text-gray-800 font-bold italic">
+                {testimonial.name}
+              </p>
               <p className="mt-4 text-gray-600">{testimonial.review}</p>
             </div>
           ))}
@@ -74,3 +114,6 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+
+

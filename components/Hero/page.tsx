@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import Image from "next/image";
 import hero from "../../public/hero.jpg";
 import versace from '../../public/Group (1).png';
@@ -22,9 +22,9 @@ export default function About() {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <button className="bg-black mb-2 text-white px-8 sm:px-10 py-3 rounded-3xl shadow-lg">
+          <Link href="/onsales"><button className="bg-black mb-2 text-white px-8 sm:px-10 py-3 rounded-3xl shadow-lg">
             Shop Now
-          </button>
+          </button></Link>
         </div>
         <div className="flex-1 relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] w-full overflow-hidden">
           <Image
