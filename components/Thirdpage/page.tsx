@@ -1,10 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import ProductCard from '../ProductCard/page';
-import { RiArrowRightSLine, RiArrowRightLine } from "react-icons/ri";
+import { RiArrowRightSLine } from "react-icons/ri";
 import vector from '../../public/Vector (3).png';
 import Image from 'next/image';
-import { HiArrowSmLeft } from "react-icons/hi";
 import Pagination from '../Pagination/page';
 
 const CasualPage = () => {
