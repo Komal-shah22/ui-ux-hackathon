@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductDetail from '@/components/Secondpage/page'
+import ProductDetail from '@/components/ProductDetail/page'
 import SecondReviews from '@/components/SecondReview/page';
 import Brands from '@/components/Sales/page'
 
@@ -9,6 +9,7 @@ const Sales = () => {
       <ProductDetail />
       <SecondReviews />
       <Brands />
+
 
     </div>
   )

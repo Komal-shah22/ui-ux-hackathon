@@ -1,6 +1,7 @@
 
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { MdDelete } from "react-icons/md";
 
@@ -66,7 +67,6 @@ const Cart = () => {
   const discount = 0.2 * subtotal;
   const deliveryFee = 15;
   const total = subtotal - discount + deliveryFee;
-
   return (
     <div className="min-h-screen pb-0 py-10">
       <div className="container mx-auto px-4">
@@ -152,9 +152,9 @@ const Cart = () => {
                 Apply
               </button>
             </div>
-            <button className="w-full bg-black text-white py-3 mt-6 rounded-3xl text-lg font-semibold">
+            <Link href='/checkout'><button className="w-full bg-black text-white py-3 mt-6 rounded-3xl text-lg font-semibold">
               Go to Checkout →
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>
