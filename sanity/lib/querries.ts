@@ -1,32 +1,33 @@
-import { defineQuery } from "next-sanity";
+import { groq } from "next-sanity";
 
-export const allproducts = defineQuery(`
-    *[_type == 'product']{
-      name,
-      price,
-      description,
-      image,
-      category,
-      discountPercent,
-      new,
-      colors,
-      sizes,
-      'imageurl': image.asset->url
-    }`);
+export const allproducts = groq`[*_type == 'product']`;
+export const fourpro = groq`[*_type == 'product'][0..3]`;
 
-    export const fourpro = defineQuery(`
-    *[_type == 'product'][0..3]{
-      name,
-      price,
-      description,
-      image,
-      category,
-      discountPercent,
-      new,
-      colors,
-      sizes,
-      'imageurl': image.asset->url
-        }`);
-      
 
+
+// import { groq } from 'next-sanity';
+// import { sanityClient } from '../../sanity/lib/client'; // Adjust this path to your sanity client
+
+// export const getProducts = async () => {
+//   const query = groq`
+//     *[_type == 'product'] {
+//       _id,
+//       name,
+//       price,
+//       description,
+//       image {
+//         asset -> {
+//           url
+//         }
+//       },
+//       category,
+//       discountPercent,
+//       new,
+//       colors,
+//       sizes
+//     }
+//   `;
   
+//   const products = await sanityClient.fetch(query);
+//   return products;
+// };
