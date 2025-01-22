@@ -1,5 +1,5 @@
 import React from "react";
-import  ProductCard from "@/components/ProductCard/page"; // Ensure ProductCard is properly exported
+import  ProductCard from "@/components/ProductCard/page"; 
 
 const ProductList = () => {
   const products = [

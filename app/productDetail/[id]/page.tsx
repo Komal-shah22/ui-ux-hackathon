@@ -29,7 +29,7 @@ const products = [
     description:
       "A stylish vertical striped shirt that combines elegance and comfort. Perfect for formal or casual occasions.",
     reviewsCount: 324,
-    images: ["/greenshirt.png", "/greenshirt2.png", "/orangeshirt.png"],
+    images: ["/greenshirt.png", "/greenshirt.png", "/orangeshirt.png"],
   },
   {
     id: 3,
@@ -68,7 +68,7 @@ const products = [
   },
   {
     id: 6,
-    images: ["/whiteshirt.png","/pant.png","/pinkshirt.png"],
+    images: ["/whiteshirt.png", "/pant.png", "/pinkshirt.png"],
     name: "COURAGE GRAPHIC T-SHIRT",
     price: 240,
     originalPrice: 260,
@@ -77,14 +77,14 @@ const products = [
   },
   {
     id: 7,
-    images: ["/pinkshirt.png","/blackshirt.png","/whiteshirt.png"],
+    images: ["/pinkshirt.png", "/blackshirt.png", "/whiteshirt.png"],
     name: "LOOSE FIT BERMUDA SHORTS",
     price: 180,
     rating: 4.5,
   },
   {
     id: 8,
-    images: ["/blackshirt.png","/cartshirt.png","/whiteshirt.png"],
+    images: ["/blackshirt.png", "/cartshirt.png", "/whiteshirt.png"],
     name: "FADED SKINNY JEANS",
     price: 130,
     originalPrice: 160,
@@ -93,7 +93,7 @@ const products = [
   },
   {
     id: 9,
-    images: ["/cartshirt.png","/jeans.png","/cartshirt.png"],
+    images: ["/cartshirt.png", "/jeans.png", "/cartshirt.png"],
     name: "FADED SKINNY JEANS",
     price: 130,
     originalPrice: 160,
@@ -102,14 +102,14 @@ const products = [
   },
   {
     id: 10,
-    images: ["/jeans.png","/jeans.png","/shorts.png"],
+    images: ["/jeans.png", "/jeans.png", "/shorts.png"],
     name: "LOOSE FIT BERMUDA SHORTS",
     price: 180,
     rating: 4.5,
   },
   {
     id: 11,
-    images: ["/shorts.png","/blueshirt.png","/shorts.png"],
+    images: ["/shorts.png", "/blueshirt.png", "/shorts.png"],
     name: "FADED SKINNY JEANS",
     price: 130,
     originalPrice: 160,
@@ -118,14 +118,14 @@ const products = [
   },
   {
     id: 12,
-    images: ["/blueshirt.png","/blueshirt.png","/shorts.png"],
+    images: ["/blueshirt.png", "/blueshirt.png", "/shorts.png"],
     name: "LOOSE FIT BERMUDA SHORTS",
     price: 180,
     rating: 4.5,
   },
   {
     id: 13,
-    images: ["/greenshirt.png","/jeans.png","/blueshirt.png"],
+    images: ["/greenshirt.png", "/jeans.png", "/blueshirt.png"],
     name: "FADED SKINNY JEANS",
     price: 130,
     originalPrice: 160,
@@ -134,21 +134,21 @@ const products = [
   },
   {
     id: 14,
-    images: ["/jeans.png","/jeans.png","/cartshirt.png"],
+    images: ["/jeans.png", "/jeans.png", "/cartshirt.png"],
     name: "LOOSE FIT BERMUDA SHORTS",
     price: 180,
     rating: 4.5,
   },
   {
     id: 15,
-    images:["/t-shirt.png","/blackshirt.png","/whiteshirt.png"],
+    images: ["/t-shirt.png", "/blackshirt.png", "/whiteshirt.png"],
     name: "T-shirt with Tape Details",
     price: 120,
     rating: 4.5,
   },
   {
     id: 16,
-    images: ["/jeans.png","/jeans.png","/cartshirt.png"],
+    images: ["/jeans.png", "/jeans.png", "/cartshirt.png"],
     name: "Skinny Fit Jeans",
     price: 240,
     originalPrice: 260,
@@ -157,14 +157,14 @@ const products = [
   },
   {
     id: 17,
-    images: ["/shirt.png","/greenshirt.png", "/orangeshirt.png"],
+    images: ["/shirt.png", "/greenshirt.png", "/orangeshirt.png"],
     name: "Checkered Shirt",
     price: 180,
     rating: 4.5,
   },
   {
     id: 18,
-    images: ["/sweat-shirt.png","/blackshirt.png","/whiteshirt.png"],
+    images: ["/sweat-shirt.png", "/blackshirt.png", "/whiteshirt.png"],
     name: "Sleeve Striped T-shirt",
     price: 130,
     originalPrice: 160,
@@ -189,9 +189,9 @@ export default function ProductPage() {
     );
   }
   const colors = [
-    { name: "Black", hex: "#000000" },
-    { name: "Green", hex: "#008000" },
-    { name: "Red", hex: "#FF0000" },
+    { name: "Nevyblue", hex: "#001F3F" },
+    { name: "Green", hex: "#556B2F" },
+    { name: "Cyan", hex: "#E0FFFF" },
   ];
   const sizes = ["S", "M", "L", "XL"];
   const decreaseQuantity = () => {
@@ -295,14 +295,14 @@ export default function ProductPage() {
             <div className="flex items-center mb-6">
               <button
                 onClick={decreaseQuantity}
-                className="px-4 py-2 border rounded-l-lg bg-gray-100 hover:bg-gray-200"
+                className="px-4 py-2 border rounded-l-full bg-black text-white hover:bg-gray-800"
               >
                 -
               </button>
               <span className="px-4 py-2 border-t border-b">{quantity}</span>
               <button
                 onClick={increaseQuantity}
-                className="px-4 py-2 border rounded-r-lg bg-gray-100 hover:bg-gray-200"
+                className="px-4 py-2 border rounded-r-full bg-black text-white hover:bg-gray-800"
               >
                 +
               </button>
@@ -350,5 +350,3 @@ export default function ProductPage() {
     </>
   );
 }
-
-

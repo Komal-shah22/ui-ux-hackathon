@@ -1,15 +1,18 @@
 export interface Product {
     _id: string;
-    productName: string;
-    _type: 'product';
-    image?: {
-        asset: {
-            _ref: string;
-            _type: 'image';
-        };
-    };
+    name: string; 
     price: number;
     description?: string;
+    image?: {
+      asset: {
+        _ref: string;
+        _type: "image";
+      };
+    };
     category: string;
-    color: string;
-}
+    discountPercent?: number;
+    new?: boolean;
+    colors?: string[];
+    sizes?: string[]; 
+  }
+  
