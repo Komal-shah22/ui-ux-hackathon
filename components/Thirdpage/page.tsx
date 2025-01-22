@@ -17,6 +17,7 @@ const CasualPage = () => {
 
   const products = [
     {
+      id:6,
       image: "/whiteshirt.png",
       title: "COURAGE GRAPHIC T-SHIRT",
       price: 240,
@@ -25,12 +26,14 @@ const CasualPage = () => {
       rating: 3.5,
     },
     {
+      id:7,
       image: "/pinkshirt.png",
       title: "LOOSE FIT BERMUDA SHORTS",
       price: 180,
       rating: 4.5,
     },
     {
+      id:8,
       image: "/blackshirt.png",
       title: "FADED SKINNY JEANS",
       price: 130,
@@ -39,6 +42,7 @@ const CasualPage = () => {
       rating: 4.5,
     },
     {
+      id:9,
       image: "/cartshirt.png",
       title: "FADED SKINNY JEANS",
       price: 130,
@@ -47,12 +51,14 @@ const CasualPage = () => {
       rating: 4.5,
     },
     {
+      id:10,
       image: "/jeans.png",
       title: "LOOSE FIT BERMUDA SHORTS",
       price: 180,
       rating: 4.5,
     },
     {
+      id:11,
       image: "/shorts.png",
       title: "FADED SKINNY JEANS",
       price: 130,
@@ -61,12 +67,14 @@ const CasualPage = () => {
       rating: 4.5,
     },
     {
+      id:12,
       image: "/blueshirt.png",
       title: "LOOSE FIT BERMUDA SHORTS",
       price: 180,
       rating: 4.5,
     },
     {
+      id:13,
       image: "/greenshirt.png",
       title: "FADED SKINNY JEANS",
       price: 130,
@@ -75,6 +83,7 @@ const CasualPage = () => {
       rating: 4.5,
     },
     {
+      id:14,
       image: "/jeans.png",
       title: "LOOSE FIT BERMUDA SHORTS",
       price: 180,
