@@ -116,9 +116,6 @@ ui-ux-hackathon/ ├── src/ │ ├── components/ │ │ ├── Head
 
 3. **Setup Environment Variables**:
  - .env file mein sensitive variables add karein:
- <!-- ```makefile
-   NEXT_PUBLIC_API_URL=your_api_url
-   NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id -->
 
 4. **Run the development server**:
     ```bash
