@@ -1,4 +1,3 @@
----
 
 # **Welcome to Shop.co: Your Ultimate Destination for Fashion!**
 
