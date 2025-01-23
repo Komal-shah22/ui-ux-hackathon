@@ -100,7 +100,7 @@ Shop.co is part of a hackathon project developed in 6 days. Each day's tasks foc
 ui-ux-hackathon/ ├── src/ │ ├── components/ │ │ ├── Header.js │ │ ├── Footer.js │ │ ├── Sidebar.js │ │ ├── Modal.js │ │ ├── Button.js │ │ ├── Card.js │ │ ├── FormInput.js │ │ ├── Navbar.js │ │ ├── ProductCard.js │ │ ├── Pagination.js │ │ ├── FilterSidebar.js │ │ ├── SearchBar.js │ │ ├── UserProfile.js │ │ ├── LoginForm.js │ │ ├── SignupForm.js │ │ ├── Notification.js │ │ ├── Spinner.js │ │ ├── Tooltip.js │ ├── pages/ │ │ ├── index.js │ │ ├── about.js │ │ ├── contact.js │ │ ├── products.js │ │ ├── product/[slug].js │ │ ├── login.js │ │ ├── signup.js │ ├── Documents/ │ │ ├── hackathon-day1.pdf │ │ ├── hackathon-day2.pdf │ │ ├── hackathon-day3.pdf │ │ ├── hackathon-day4.pdf │ │ ├── hackathon-day5.pdf │ │ ├── hackathon-day6.pdf ├── public/ │ ├── images/ │ ├── assets/ ├── .env ├── README.md
 
 
-![imag alt]()
+![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/d25e46bc3dbc2a4da00674c0c04f3410a3537ca6/Documents/hackathon-day-6/structure.jpg)
 ---
 
 ## **Environment Setup**
