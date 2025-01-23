@@ -78,7 +78,7 @@ The primary objective of Day 5 was to prepare the marketplace for deployment by 
    - Page load time reduced to under 2 seconds.
 
 
- ![imag alt](https://github.com/Komal-shah22/Marketplace-Hackathon-Day-5/blob/f7f69c6d6577385fdc7c251d5d182bbc1acafddf/report.jpg)  
+ ![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/a9bc1c783f45a17323c0baf74d935be340ff6495/Documents/hackathon-day-5/report1.jpg)  
 
 *Test Results:*
 | Test Case ID | Test Case Description         | Test Steps                        | Expected Result                | Actual Result         | Status  | Remarks                  |
