@@ -106,7 +106,7 @@ ui-ux-hackathon/ ├── src/ │ ├── components/ │ │ ├── Head
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repository-name/ui-ux-hackathon.git
+   git clone 
 
 
 2. **Install dependencies**:
