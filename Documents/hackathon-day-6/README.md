@@ -195,7 +195,6 @@ Environment variables file for sensitive data such as API keys.
 This file provides an overview of the project.
 
 ---
-![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/d25e46bc3dbc2a4da00674c0c04f3410a3537ca6/Documents/hackathon-day-6/structure.jpg)
 
 ## **Environment Setup**
 
