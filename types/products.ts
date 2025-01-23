@@ -14,5 +14,9 @@ export interface Product {
     new?: boolean;
     colors?: string[];
     sizes?: string[]; 
+    slug:{
+      _type : "slug"
+      current : string
+    }
   }
   

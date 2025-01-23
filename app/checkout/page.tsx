@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Checkout() {
   return (
@@ -52,10 +53,12 @@ export default function Checkout() {
               ].map((item, index) => (
                 <div key={index} className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
-                    <img
+                    <Image
                       src={item.img}
                       alt={item.name}
                       className="w-12 h-12 object-cover rounded-lg"
+                      width={200}
+                      height={200}
                     />
                     <span>{item.name}</span>
                   </div>

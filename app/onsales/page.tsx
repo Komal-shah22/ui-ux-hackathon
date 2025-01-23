@@ -58,7 +58,7 @@ const Sales = () => {
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <button className="bg-white border-black border-2 text-black px-10 py-4 rounded-full hover:bg-gray-800 transition">
+        <button className="bg-white border-black border-2 text-black px-10 py-4 rounded-full hover:bg-black hover:text-white transition">
           View All
         </button>
       </div>

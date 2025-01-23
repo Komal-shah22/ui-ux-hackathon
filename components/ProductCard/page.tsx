@@ -103,7 +103,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
       </>
     );
   };
-
   return (
     <Link href={`/productDetail/${id}`} passHref>
       <div className="flex flex-col items-center bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 w-full sm:w-[300px]">

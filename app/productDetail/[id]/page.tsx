@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 import { useParams } from "next/navigation";
@@ -9,7 +10,10 @@ import vector3 from "@/public/Vector (3).png";
 import { RiArrowRightSLine } from "react-icons/ri";
 import SecondReview from "@/components/SecondReview/page";
 import Brands from "@/components/Sales/page";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+// Product Data
 const products = [
   {
     id: 1,
@@ -21,7 +25,7 @@ const products = [
     reviewsCount: 456,
     images: ["/cartshirt.png", "/cartshirt2.png", "/cartshirt.png"],
   },
-  {
+    {
     id: 2,
     name: "VERTICAL STRIPED SHIRT",
     price: 120,
@@ -171,6 +175,7 @@ const products = [
     discount: "-30%",
     rating: 4.5,
   },
+
 ];
 
 export default function ProductPage() {
@@ -179,6 +184,8 @@ export default function ProductPage() {
   const [selectedColor, setSelectedColor] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [cartCount, setCartCount] = useState(0);  // For cart count
+
   if (!item) {
     return (
       <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -188,18 +195,28 @@ export default function ProductPage() {
       </div>
     );
   }
+
   const colors = [
     { name: "Nevyblue", hex: "#001F3F" },
     { name: "Green", hex: "#556B2F" },
     { name: "Cyan", hex: "#E0FFFF" },
   ];
+
   const sizes = ["S", "M", "L", "XL"];
+  
   const decreaseQuantity = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };
+
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
   };
+
+  const addToCart = () => {
+    setCartCount(cartCount + 1);
+    toast.success(`${item.name} added to cart!`);
+  };
+
   return (
     <>
       <Head>
@@ -209,25 +226,14 @@ export default function ProductPage() {
           content={`Buy ${item.name} now for only $${item.price}. Perfect for any occasion.`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="keywords"
-          content="shopping, t-shirts, clothing, online store"
-        />
-        <meta name="author" content="Your Store" />
       </Head>
 
       <main className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <nav aria-label="breadcrumb">
           <ul className="flex gap-4 mb-10 text-sm text-gray-600">
-            <li className="flex items-center">
-              Home <RiArrowRightSLine className="mx-2" />
-            </li>
-            <li className="flex items-center">
-              Shop <RiArrowRightSLine className="mx-2" />
-            </li>
-            <li className="flex items-center">
-              Men <RiArrowRightSLine className="mx-2" />
-            </li>
+            <li className="flex items-center">Home <RiArrowRightSLine className="mx-2" /></li>
+            <li className="flex items-center">Shop <RiArrowRightSLine className="mx-2" /></li>
+            <li className="flex items-center">Men <RiArrowRightSLine className="mx-2" /></li>
             <li className="font-semibold">T-shirts</li>
           </ul>
         </nav>
@@ -235,27 +241,20 @@ export default function ProductPage() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Gallery images={item.images} />
           <div>
-            <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">
-              {item.name}
-            </h1>
+            <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">{item.name}</h1>
             <div className="flex items-center mb-4">
               <span className="text-yellow-400 font-bold mr-2">4.5/5</span>
-              <span className="text-gray-500">
-                ({item.reviewsCount} Reviews)
-              </span>
+              <span className="text-gray-500">({item.reviewsCount} Reviews)</span>
             </div>
             <div className="flex items-center mb-6 flex-wrap gap-2">
-              <span className="text-2xl font-bold text-gray-800">
-                ${item.price}
-              </span>
+              <span className="text-2xl font-bold text-gray-800">${item.price}</span>
               {item.discountPrice && (
-                <span className="line-through text-gray-500">
-                  ${item.discountPrice}
-                </span>
+                <span className="line-through text-gray-500">${item.discountPrice}</span>
               )}
               <span className="text-green-600 font-medium">-40%</span>
             </div>
             <p className="text-base text-gray-600 mb-6">{item.description}</p>
+
             <div className="mb-6">
               <h3 className="font-semibold mb-2">Select Colors</h3>
               <div className="flex space-x-2 flex-wrap">
@@ -274,6 +273,7 @@ export default function ProductPage() {
                 ))}
               </div>
             </div>
+
             <div className="mb-6">
               <h3 className="font-semibold mb-2">Choose Size</h3>
               <div className="flex flex-wrap gap-2">
@@ -292,6 +292,7 @@ export default function ProductPage() {
                 ))}
               </div>
             </div>
+
             <div className="flex items-center mb-6">
               <button
                 onClick={decreaseQuantity}
@@ -307,7 +308,9 @@ export default function ProductPage() {
                 +
               </button>
             </div>
+
             <button
+              onClick={addToCart}
               className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
               aria-label="Add to Cart"
             >
@@ -315,6 +318,7 @@ export default function ProductPage() {
             </button>
           </div>
         </section>
+
         <section className="mt-12 border-b pt-6">
           <ul className="flex justify-around items-center text-gray-600">
             <li className="cursor-pointer hover:text-black">Product Details</li>
@@ -324,6 +328,7 @@ export default function ProductPage() {
             <li className="cursor-pointer hover:text-black">FAQs</li>
           </ul>
         </section>
+
         <section className="mt-12">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-semibold">
@@ -347,6 +352,8 @@ export default function ProductPage() {
 
         <Brands />
       </main>
+
+      <ToastContainer />
     </>
   );
 }
