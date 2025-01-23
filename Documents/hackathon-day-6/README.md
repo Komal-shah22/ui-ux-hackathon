@@ -75,7 +75,7 @@ Shop.co is part of a hackathon project developed in 6 days. Each day's tasks foc
 ---
 
 ### **Performance Testing**:
-![imag alt]
+![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/68ba49321b4862ded7a9a861eba0ccd2b03d244b/Documents/hackathon-day-6/report.jpg)
 
 
 ### **Day 6: Deployment and Staging Environment**
@@ -92,7 +92,7 @@ Shop.co is part of a hackathon project developed in 6 days. Each day's tasks foc
 
 ### **Hackathon Day-by-Day Progress**
 
-![imag alt]()
+![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/2292ed345017067d565e24f0dd25c8d7d000b85a/Documents/hackathon-day-6/(Day%201-6).jpg)
 
 
 ## **Folder Structure**
@@ -100,6 +100,7 @@ Shop.co is part of a hackathon project developed in 6 days. Each day's tasks foc
 ui-ux-hackathon/ ├── src/ │ ├── components/ │ │ ├── Header.js │ │ ├── Footer.js │ │ ├── Sidebar.js │ │ ├── Modal.js │ │ ├── Button.js │ │ ├── Card.js │ │ ├── FormInput.js │ │ ├── Navbar.js │ │ ├── ProductCard.js │ │ ├── Pagination.js │ │ ├── FilterSidebar.js │ │ ├── SearchBar.js │ │ ├── UserProfile.js │ │ ├── LoginForm.js │ │ ├── SignupForm.js │ │ ├── Notification.js │ │ ├── Spinner.js │ │ ├── Tooltip.js │ ├── pages/ │ │ ├── index.js │ │ ├── about.js │ │ ├── contact.js │ │ ├── products.js │ │ ├── product/[slug].js │ │ ├── login.js │ │ ├── signup.js │ ├── Documents/ │ │ ├── hackathon-day1.pdf │ │ ├── hackathon-day2.pdf │ │ ├── hackathon-day3.pdf │ │ ├── hackathon-day4.pdf │ │ ├── hackathon-day5.pdf │ │ ├── hackathon-day6.pdf ├── public/ │ ├── images/ │ ├── assets/ ├── .env ├── README.md
 
 
+![imag alt]()
 ---
 
 ## **Environment Setup**
