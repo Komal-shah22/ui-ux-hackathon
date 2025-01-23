@@ -75,7 +75,7 @@ Shop.co is part of a hackathon project developed in 6 days. Each day's tasks foc
 ---
 
 ### **Performance Testing**:
-![imag alt]()
+![imag alt]
 
 
 ### **Day 6: Deployment and Staging Environment**
@@ -121,21 +121,20 @@ ui-ux-hackathon/ ├── src/ │ ├── components/ │ │ ├── Head
    NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
 
 4. **Run the development server**:
- ```bash
-  npm run dev
+    ```bash
+       npm run dev
 
 5. **Visit the application**: 
  Open your browser and go to http://localhost:3000.
 
----
 
 ## **Staging Environment**
  Project deploy link
 
-🔗 Visit Staging Environment (https://figma-hackathon-design.netlify.app/)
+🔗 Visit Staging Environment 
 
 ## **Contact**
-For queries or feedback, reach out via:
+ - For queries or feedback, reach out via:
 
 - Email: komalfareed93@gmail.com
 - GitHub: komalshah22
