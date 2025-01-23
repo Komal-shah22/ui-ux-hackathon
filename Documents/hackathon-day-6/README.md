@@ -92,7 +92,7 @@ Shop.co is part of a hackathon project developed in 6 days. Each day's tasks foc
 
 ### **Hackathon Day-by-Day Progress**
 
-![imag alt]()
+![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/2292ed345017067d565e24f0dd25c8d7d000b85a/Documents/hackathon-day-6/(Day%201-6).jpg)
 
 
 ## **Folder Structure**
