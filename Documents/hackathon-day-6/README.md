@@ -94,48 +94,152 @@ Shop.co is part of a hackathon project developed in 6 days. Each day's tasks foc
 
 ![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/2292ed345017067d565e24f0dd25c8d7d000b85a/Documents/hackathon-day-6/(Day%201-6).jpg)
 
+## Project Structure
+The project is organized as follows:
 
-## **Folder Structure**
+```plaintext
+ui-ux-hackathon/
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── Sidebar.js
+│   │   ├── Modal.js
+│   │   ├── Button.js
+│   │   ├── Card.js
+│   │   ├── FormInput.js
+│   │   ├── Navbar.js
+│   │   ├── ProductCard.js
+│   │   ├── Pagination.js
+│   │   ├── FilterSidebar.js
+│   │   ├── SearchBar.js
+│   │   ├── UserProfile.js
+│   │   ├── LoginForm.js
+│   │   ├── SignupForm.js
+│   │   ├── Notification.js
+│   │   ├── Spinner.js
+│   │   ├── Tooltip.js
+│   ├── pages/
+│   │   ├── index.js
+│   │   ├── about.js
+│   │   ├── contact.js
+│   │   ├── products.js
+│   │   ├── product/[slug].js
+│   │   ├── login.js
+│   │   ├── signup.js
+│   ├── Documents/
+│   │   ├── hackathon-day1.pdf
+│   │   ├── hackathon-day2.pdf
+│   │   ├── hackathon-day3.pdf
+│   │   ├── hackathon-day4.pdf
+│   │   ├── hackathon-day5.pdf
+│   │   ├── hackathon-day6.pdf
+├── public/
+│   ├── images/
+│   ├── assets/
+├── .env
+├── README.md
+```
 
-ui-ux-hackathon/ ├── src/ │ ├── components/ │ │ ├── Header.js │ │ ├── Footer.js │ │ ├── Sidebar.js │ │ ├── Modal.js │ │ ├── Button.js │ │ ├── Card.js │ │ ├── FormInput.js │ │ ├── Navbar.js │ │ ├── ProductCard.js │ │ ├── Pagination.js │ │ ├── FilterSidebar.js │ │ ├── SearchBar.js │ │ ├── UserProfile.js │ │ ├── LoginForm.js │ │ ├── SignupForm.js │ │ ├── Notification.js │ │ ├── Spinner.js │ │ ├── Tooltip.js │ ├── pages/ │ │ ├── index.js │ │ ├── about.js │ │ ├── contact.js │ │ ├── products.js │ │ ├── product/[slug].js │ │ ├── login.js │ │ ├── signup.js │ ├── Documents/ │ │ ├── hackathon-day1.pdf │ │ ├── hackathon-day2.pdf │ │ ├── hackathon-day3.pdf │ │ ├── hackathon-day4.pdf │ │ ├── hackathon-day5.pdf │ │ ├── hackathon-day6.pdf ├── public/ │ ├── images/ │ ├── assets/ ├── .env ├── README.md
+## Description of Folders and Files
 
+### **src/components/**
+This folder contains all reusable UI components, such as:
+- **Header.js**: Displays the navigation bar at the top of the page.
+- **Footer.js**: Displays the footer section.
+- **Sidebar.js**: Provides a sidebar for filters or navigation.
+- **Modal.js**: Handles pop-up modal functionality.
+- **Button.js**: Customizable button components.
+- **Card.js**: Generic card component used in various places.
+- **FormInput.js**: Input fields for forms.
+- **Navbar.js**: Additional navigation bar configuration.
+- **ProductCard.js**: Displays product information in a card format.
+- **Pagination.js**: Handles pagination of data.
+- **FilterSidebar.js**: Dynamic filtering options for products.
+- **SearchBar.js**: Search functionality for the application.
+- **UserProfile.js**: Displays user profile information.
+- **LoginForm.js**: Form for user login.
+- **SignupForm.js**: Form for user signup.
+- **Notification.js**: Handles notifications for the application.
+- **Spinner.js**: Loading spinner for asynchronous operations.
+- **Tooltip.js**: Provides tooltips for additional context.
 
-![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/d25e46bc3dbc2a4da00674c0c04f3410a3537ca6/Documents/hackathon-day-6/structure.jpg)
+### **src/pages/**
+This folder contains all the main pages:
+- **index.js**: Homepage of the application.
+- **about.js**: About page.
+- **contact.js**: Contact page.
+- **products.js**: Page displaying all products.
+- **product/[slug].js**: Dynamic route for individual product details.
+- **login.js**: User login page.
+- **signup.js**: User signup page.
+
+### **src/Documents/**
+Contains project documentation for each day of the hackathon:
+- **hackathon-day1.pdf**: Details of Day 1 activities.
+- **hackathon-day2.pdf**: Details of Day 2 activities.
+- **hackathon-day3.pdf**: Details of Day 3 activities.
+- **hackathon-day4.pdf**: Details of Day 4 activities.
+- **hackathon-day5.pdf**: Details of Day 5 activities.
+- **hackathon-day6.pdf**: Details of Day 6 activities.
+
+### **public/**
+This folder contains public assets:
+- **images/**: Image assets used in the project.
+- **assets/**: Additional assets like icons, fonts, etc.
+
+### **.env**
+Environment variables file for sensitive data such as API keys.
+
+### **README.md**
+This file provides an overview of the project.
+
 ---
+![imag alt](https://github.com/Komal-shah22/ui-ux-hackathon/blob/d25e46bc3dbc2a4da00674c0c04f3410a3537ca6/Documents/hackathon-day-6/structure.jpg)
 
 ## **Environment Setup**
 
 1. **Clone the repository**:
    ```bash
-   git clone 
-
+   git clone https://github.com/Komal-shah22/ui-ux-hackathon.git
+   cd ui-ux-hackathon
+   ```
 
 2. **Install dependencies**:
    ```bash
-  cd ui-ux-hackathon
-  npm install
+   npm install
+   ```
 
-3. **Setup Environment Variables**:
- - .env file mein sensitive variables add karein:
+3. **Setup environment variables**:
+   Create a `.env` file and add the following:
+   ```env
+   NEXT_PUBLIC_API_URL=your_api_url
+   NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+   ```
 
 4. **Run the development server**:
-    ```bash
-       npm run dev
+   ```bash
+   npm run dev
+   ```
 
-5. **Visit the application**: 
- Open your browser and go to http://localhost:3000.
+5. **Visit the application**:
+   Open your browser and navigate to `http://localhost:3000`.
+
+---
+
+## Deployment
+Deployed on **Vercel**. Visit the [staging environment](https://github.com/Komal-shah22/ui-ux-hackathon) for more details.
+
+---
+
+## Contact
+For queries or feedback:
+- **Email**: komalfareed93@gmail.com
+- **GitHub**: [Komal Shah](https://github.com/Komal-shah22)
+
+---
 
 
-## **Staging Environment**
- Project deploy link
-
-🔗 Visit Staging Environment 
-
-## **Contact**
- - For queries or feedback, reach out via:
-
-- Email: komalfareed93@gmail.com
-- GitHub: komalshah22
 
 
 
