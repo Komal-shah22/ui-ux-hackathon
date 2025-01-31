@@ -179,7 +179,7 @@ const products = [
 
 export default function ProductPage() {
   const { id } = useParams();
-  const item = products.find((product:any) => product.id === Number(id));
+  const item = products.find((product) => product.id === Number(id));
   const [selectedColor, setSelectedColor] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [quantity, setQuantity] = useState(1);

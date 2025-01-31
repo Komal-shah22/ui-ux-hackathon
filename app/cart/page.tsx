@@ -1,3 +1,4 @@
+
 "use client"; 
 import Image from "next/image";
 import Link from "next/link";
@@ -108,7 +109,7 @@ const CartPage = () => {
           <div className="flex flex-col items-center justify-center min-h-[50vh] text-center">
             <Image src={emptyCartIcon} width={300} height={300} alt="Empty Cart" className="mb-4" />
             <h2 className="text-2xl font-bold text-gray-700">Your Cart is Empty</h2>
-            <p className="text-gray-500 mt-2">Looks like you haven't added anything to your cart yet.</p>
+            <p className="text-gray-500 mt-2">Looks like you haven&apos;t added anything to your cart yet.</p>
             <Link href="/onsales">
               <button className="mt-4 px-6 py-4 bg-black text-white rounded-lg hover:bg-gray-800 transition">Continue Shopping</button>
             </Link>

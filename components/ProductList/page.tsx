@@ -1,7 +1,5 @@
 import React from "react";
 import  ProductCard from "@/components/ProductCard/page"; 
-import { Product } from "@/types/products";
-
 const ProductList = () => {
   const products  = [
     {
