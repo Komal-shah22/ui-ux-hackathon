@@ -9,9 +9,13 @@ import { getCartItem, removeFromCart, updateCartQuantity } from '../action/actio
 import Swal from 'sweetalert2';
 import { urlFor } from '@/sanity/lib/image';
 import emptyCartIcon from '../../public/empty-carticon.png'
+import { useRouter } from 'next/navigation'; // ✅ Correct import
+
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
+const router = useRouter(); // ✅ Now it will work
+
 
   useEffect(() => {
     setCartItems(getCartItem());
@@ -45,6 +49,24 @@ const CartPage = () => {
       }
     });
   };
+
+const handleProceed = () => {
+    Swal.fire({
+        title: 'Proceed to checkout',
+        text: 'Please review your cart before checkout',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, Proceed!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire('Success', 'Your order has been successfully processed', 'success');
+            router.push('/checkout'); 
+            setCartItems([]);
+        }
+    });
+};
 
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.inventory, 0);
   const discount = 0.2 * subtotal;
@@ -100,9 +122,12 @@ const CartPage = () => {
                 <input type="text" placeholder="Add promo code" className="w-full border rounded-lg px-4 py-2 text-sm focus:ring focus:ring-gray-300" />
                 <button className="w-full bg-black text-white py-2 mt-2 rounded-lg hover:bg-gray-800 transition">Apply</button>
               </div>
-              <Link href='/checkout'>
-                <button className="w-full bg-black text-white py-3 mt-6 rounded-lg text-lg font-semibold hover:bg-gray-800 transition">Go to Checkout →</button>
-              </Link>
+              <button 
+                onClick={handleProceed}
+                className="w-full bg-black text-white py-3 mt-6 rounded-lg text-lg font-semibold hover:bg-gray-800 transition">
+                Go to Checkout →
+                </button>
+
             </div>
           </div>
         ) : (
@@ -121,3 +146,5 @@ const CartPage = () => {
 };
 
 export default CartPage;
+
+
