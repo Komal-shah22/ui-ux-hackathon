@@ -1,10 +1,10 @@
-
 import React from "react";
 import Image from "next/image";
 import vactor from '../../public/Vector.png';
 import cart from '../../public/cart.png';
 import search from '../../public/search.png';
 import { FiSearch } from "react-icons/fi";
+import Link from "next/link";
 
 const SearchBar = () => {
   return (
@@ -26,7 +26,7 @@ const SearchBar = () => {
           alt="search" 
           className="lg:hidden"  
         />
-        <Image src={cart} alt="cart" />
+       <Link href='/cart'><Image src={cart} alt="cart" className=" w-8 h-6"/></Link>
         <Image src={vactor} alt="vactor" />
       </div>
     </div>

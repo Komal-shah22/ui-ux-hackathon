@@ -1,8 +1,9 @@
 import React from "react";
 import  ProductCard from "@/components/ProductCard/page"; 
+import { Product } from "@/types/products";
 
 const ProductList = () => {
-  const products = [
+  const products  = [
     {
       id: 15,
       image: "/t-shirt.png",

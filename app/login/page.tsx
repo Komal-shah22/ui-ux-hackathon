@@ -50,11 +50,11 @@ const AccountForm = () => {
               Create an account
             </Link>
           </p>
-          <button
+          <Link href="/signup"><button
             className="w-full mt-4 bg-black text-white py-2 rounded-lg hover:bg-gray-900 transition"
           >
             CREATE ACCOUNT
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

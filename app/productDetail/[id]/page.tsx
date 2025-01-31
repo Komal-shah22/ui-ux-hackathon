@@ -13,7 +13,6 @@ import Brands from "@/components/Sales/page";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// Product Data
 const products = [
   {
     id: 1,
@@ -180,7 +179,7 @@ const products = [
 
 export default function ProductPage() {
   const { id } = useParams();
-  const item = products.find((product) => product.id === Number(id));
+  const item = products.find((product:any) => product.id === Number(id));
   const [selectedColor, setSelectedColor] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [quantity, setQuantity] = useState(1);
@@ -216,7 +215,6 @@ export default function ProductPage() {
     setCartCount(cartCount + 1);
     toast.success(`${item.name} added to cart!`);
   };
-
   return (
     <>
       <Head>
@@ -238,7 +236,7 @@ export default function ProductPage() {
           </ul>
         </nav>
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10">
           <Gallery images={item.images} />
           <div>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">{item.name}</h1>
@@ -316,9 +314,9 @@ export default function ProductPage() {
             >
               Add to Cart
             </button>
+
           </div>
         </section>
-
         <section className="mt-12 border-b pt-6">
           <ul className="flex justify-around items-center text-gray-600">
             <li className="cursor-pointer hover:text-black">Product Details</li>
@@ -357,3 +355,12 @@ export default function ProductPage() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+

@@ -29,6 +29,11 @@ export default defineType({
         type: 'text',
         },
         {
+        name:'inventory',
+        title:'Inventory',
+        type:'number',
+        },
+        {
         name: 'image',
         title: 'Image',
         type: 'image',
