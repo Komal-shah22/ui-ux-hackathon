@@ -31,7 +31,9 @@ const Sales = () => {
             key={item._id}
             className="relative group border rounded-lg shadow-md hover:shadow-lg transition duration-200 overflow-hidden"
           >
-            <Link href={`/product/${item.slug.current}`}>
+            {/* <Link href={`/product/${item.slug.current}`}> */}
+            <Link href={`/product/${item.slug?.current}`}>
+
             {/* Product Image */}
             {item.image && (
               <div className="relative">

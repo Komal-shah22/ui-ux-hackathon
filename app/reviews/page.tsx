@@ -116,9 +116,9 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center mb-10">
           <button
-            className="px-6 py-3 bg-white text-black font-bold rounded-3xl border-2 shadow-md hover:bg-black hover:text-white transition-colors"
+            className="px-6 py-3 bg-black text-white font-bold rounded-3xl border-2 shadow-md hover:bg-black hover:text-white transition-colors"
             onClick={loadMoreReviews}
           >
             Load More Reviews

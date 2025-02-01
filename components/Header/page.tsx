@@ -8,7 +8,7 @@ import vector from '../../public/Vector.png';
 import cart from '../../public/cart.png';
 import search from '../../public/search.png';
 
-const menuItems = ['shop', 'onsales', 'cart', 'brands'];
+const menuItems = ['shop', 'onsales', 'reviews', 'brands'];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

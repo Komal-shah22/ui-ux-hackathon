@@ -8,7 +8,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import Gallery from "@/components/Galery/page";
 import vector3 from "@/public/Vector (3).png";
 import { RiArrowRightSLine } from "react-icons/ri";
-import SecondReview from "@/components/SecondReview/page";
 import Brands from "@/components/Sales/page";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -345,7 +344,7 @@ export default function ProductPage() {
               </button>
             </div>
           </div>
-          <SecondReview />
+          {/* <SecondReview /> */}
         </section>
 
         <Brands />
