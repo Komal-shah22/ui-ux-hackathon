@@ -27,7 +27,7 @@ const SearchBar = () => {
           className="lg:hidden"  
         />
        <Link href='/cart'><Image src={cart} alt="cart" className=" w-8 h-6"/></Link>
-        <Image src={vactor} alt="vactor" />
+       <Link href='/login'><Image src={vactor} alt="vactor" className="w-8 h-6"/></Link>
       </div>
     </div>
   );

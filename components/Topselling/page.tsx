@@ -25,7 +25,7 @@ const Sales = () => {
       <h1 className="text-5xl font-extrabold text-center mb-12">
         TOP SELLING
       </h1>
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((item) => (
           <div
             key={item._id}
@@ -87,7 +87,6 @@ const Sales = () => {
 };
 
 export default Sales;
-
 
 
 

@@ -215,6 +215,7 @@ import { addToCart as addToCartAction } from "../../action/action"; // Renaming 
 import Swal from "sweetalert2";
 import Head from "next/head";
 import Sales from "@/components/ProductList/page";
+import Link from "next/link";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -409,11 +410,14 @@ export default function ProductPage({ params }: ProductPageProps) {
             </div>
             <button
               onClick={(e) => handleAddToCart(e, product)}
-              className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
+              className="w-60 mr-4 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
               aria-label="Add to Cart"
             >
               Add to Cart
             </button>
+            <Link href='/cart'><button className=" mt-6  w-60 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
+             View Cart
+            </button></Link>
           </div>
         </div>
         <Sales />
