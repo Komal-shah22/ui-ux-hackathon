@@ -11,7 +11,7 @@ const AuthGuard = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         if (isSignedIn === false) {
-            router.replace("/login");
+            router.replace("login");
         } else {
             setIsLoading(false);
         }
