@@ -10,6 +10,7 @@
     "import-Data": "node scripts/importData.mjs"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.22.12",
     "@clerk/nextjs": "^6.11.1",
     "@reduxjs/toolkit": "^2.5.1",
     "@sanity/client": "^6.25.0",
